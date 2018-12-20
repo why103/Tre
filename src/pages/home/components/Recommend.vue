@@ -2,7 +2,7 @@
   <div>
     <div class="title border-bottom">热销推荐</div>
     <ul>
-      <li class="item" v-for='item of recommendList' :key='item.id'>
+      <li class="item" v-for='item of list' :key='item.id'>
         <img class="item-img" :src="item.imgUrl" >
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1510/97/974063def69779ab.img.jpg_200x200_3095b686.jpg',
-        title: '宝宇伊春西岭温泉度假山庄',
-        desc: '冰雪之冠，富有异国情调的美丽都市,冰雪之冠，富有异国情调的美丽都市'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1510/97/974063def69779ab.img.jpg_200x200_3095b686.jpg',
-        title: '宝宇伊春西岭温泉度假山庄',
-        desc: '冰雪之冠，富有异国情调的美丽都市,冰雪之冠，富有异国情调的美丽都市'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1510/97/974063def69779ab.img.jpg_200x200_3095b686.jpg',
-        title: '宝宇伊春西岭温泉度假山庄',
-        desc: '冰雪之冠，富有异国情调的美丽都市,冰雪之冠，富有异国情调的美丽都市'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
